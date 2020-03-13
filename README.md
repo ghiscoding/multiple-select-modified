@@ -1,8 +1,20 @@
 # Multiple Select
 
 ## Modified Version
-This is a modified version (forked from version `1.2.1`) of [multiple-select](https://github.com/wenzhixin/multiple-select) which is adapted for my needs and used in [Angular-Slickgrid](https://github.com/ghiscoding/Angular-Slickgrid) and [Aurelia-Slickgrid](https://github.com/ghiscoding/aurelia-slickgrid). 
+This is a modified version (forked from version `1.2.1`) of [multiple-select](https://github.com/wenzhixin/multiple-select) which is adapted for my needs and used in [Angular-Slickgrid](https://github.com/ghiscoding/Angular-Slickgrid) and [Aurelia-Slickgrid](https://github.com/ghiscoding/aurelia-slickgrid). The list of changes are shown below.
 
+## Description
+Multiple select is a jQuery plugin to select multiple elements with checkboxes :).
+
+To get started checkout examples and documentation at http://wenzhixin.net.cn/p/multiple-select
+
+## Installation 
+
+```shell
+npm install multiple-select-adapted
+```
+
+## Changes from original
 The main changes are the following:
  - `okButton` boolean flag which when set will add an "OK" button at the end of the list to make it convenient to the user to close the window
  - `okButtonText` was also added to change locale
@@ -21,11 +33,6 @@ The main changes are the following:
  - `domElmSelectAllHeight` defaults to 39 (as per CSS), that is the DOM element of the "Select All" text area
  - `useSelectOptionLabel` (defaults to False), when set to True it will use the <option label=""> that can be used to display selected options
  - `useSelectOptionLabelToHtml` (defaults to False), same as "useSelectOptionLabel" but will also render html
-
-## Description
-Multiple select is a jQuery plugin to select multiple elements with checkboxes :).
-
-To get started checkout examples and documentation at http://wenzhixin.net.cn/p/multiple-select
 
 ## jsFiddle examples
 
