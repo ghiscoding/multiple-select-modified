@@ -1,7 +1,7 @@
 # Multiple Select
 
 ## Modified Version
-This is a modified version (forked from version `1.2.1`) of [multiple-select](https://github.com/wenzhixin/multiple-select) which is adapted for my needs and used in [Angular-Slickgrid](https://github.com/ghiscoding/Angular-Slickgrid) and [Aurelia-Slickgrid](https://github.com/ghiscoding/aurelia-slickgrid). The list of changes are shown below.
+This is a modified version (forked from version `1.2.1`) of [multiple-select](https://github.com/wenzhixin/multiple-select) which is modified for my needs and used in [Angular-Slickgrid](https://github.com/ghiscoding/Angular-Slickgrid) and [Aurelia-Slickgrid](https://github.com/ghiscoding/aurelia-slickgrid). The list of changes are shown below.
 
 ## Description
 Multiple select is a jQuery plugin to select multiple elements with checkboxes :).
@@ -11,7 +11,7 @@ To get started checkout examples and documentation at http://wenzhixin.net.cn/p/
 ## Installation 
 
 ```shell
-npm install multiple-select-adapted
+npm install multiple-select-modified
 ```
 
 ## Changes from original
