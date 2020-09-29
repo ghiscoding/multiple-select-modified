@@ -486,8 +486,12 @@
 
       // Fix #77: 'All selected' when no options
       if (!this.$el.children().length) {
-        this.$selectAll.parent().hide();
-        this.$noResults.show();
+        if (this.$selectAll) {
+          this.$selectAll.parent().hide();
+        }
+        if (this.$noResults) {
+          this.$noResults.show();
+        }
       }
 
       if (this.options.offsetLeft) {
