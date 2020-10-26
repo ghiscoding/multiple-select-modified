@@ -1,6 +1,6 @@
 /**
  * @author zhixin wen <wenzhixin2010@gmail.com>
- * @version 1.3.0
+ * @version 1.3.1
  *
  * http://wenzhixin.net.cn/p/multiple-select/
  *
@@ -25,6 +25,9 @@
  * - "domElmSelectAllHeight" defaults to 39 (as per CSS), that is the DOM element of the "Select All" text area
  * - "useSelectOptionLabel" (defaults to False), when set to True it will use the <option label=""> that can be used to display selected options
  * - "useSelectOptionLabelToHtml" (defaults to False), same as "useSelectOptionLabel" but will also render html
+ * Add new methods:
+ * - getOptions: returns multiple-select current options (copied from latest version of the original multiple-select.js lib)
+ * - refreshOptions: set new multiple-select options and refresh the element (copied from latest version of the original multiple-select.js lib)
  */
 
 (function ($) {
@@ -47,6 +50,23 @@
       return arg;
     });
     return flag ? str : '';
+  };
+
+  var compareObjects = function (objectA, objectB, compareLength) {
+    var aKeys = Object.keys(objectA);
+    var bKeys = Object.keys(objectB);
+
+    if (compareLength && aKeys.length !== bKeys.length) {
+      return false;
+    }
+
+    for (var key of aKeys) {
+      if (bKeys.includes(key) && objectA[key] !== objectB[key]) {
+        return false;
+      }
+    }
+
+    return true;
   };
 
   var removeDiacritics = function (str) {
@@ -403,7 +423,7 @@
       }).off('keyup').on('keyup', function (e) {
         // enter or space
         // Avoid selecting/deselecting if no choices made
-        if (that.options.filterAcceptOnEnter && (e.which === 13 || e.which == 32) && that.$searchInput.val()) {
+        if (that.options.filterAcceptOnEnter && (e.which === 13 || e.which === 32) && that.$searchInput.val()) {
           that.$selectAll.click();
           that.close();
           that.focus();
@@ -772,6 +792,22 @@
       });
     },
 
+    getOptions: function () {
+      // deep copy and remove data
+      const options = $.extend({}, this.options);
+      delete options.data;
+      return $.extend(true, {}, options);
+    },
+
+    refreshOptions: function (options) {
+      // If the objects are equivalent then avoid the call of destroy / init methods
+      if (compareObjects(this.options, options, true)) {
+        return;
+      }
+      this.options = $.extend(this.options, options);
+      this.init();
+    },
+
     //value or text, default: 'value'
     getSelects: function (type) {
       var that = this,
@@ -984,6 +1020,7 @@
       value,
       allowedMethods = [
         'getSelects', 'setSelects',
+        'getOptions', 'refreshOptions',
         'enable', 'disable',
         'open', 'close',
         'checkAll', 'uncheckAll',
