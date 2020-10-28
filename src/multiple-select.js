@@ -1,6 +1,6 @@
 /**
  * @author zhixin wen <wenzhixin2010@gmail.com>
- * @version 1.3.6
+ * @version 1.3.7
  *
  * http://wenzhixin.net.cn/p/multiple-select/
  *
@@ -60,8 +60,9 @@
       return false;
     }
 
-    for (var key of aKeys) {
-      if (bKeys.includes(key) && objectA[key] !== objectB[key]) {
+    for (var i = 0; i < aKeys.length; i++) {
+      var key = aKeys[i];
+      if (bKeys.indexOf(key) >= 0 && objectA[key] !== objectB[key]) {
         return false;
       }
     }
