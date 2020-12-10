@@ -1,7 +1,7 @@
 # Multiple Select
 
 ## Modified Version
-This is a modified version (forked from version `1.2.1`) of [multiple-select](https://github.com/wenzhixin/multiple-select) which is modified version to cover functionalities required by my other libraries [Angular-Slickgrid](https://github.com/ghiscoding/Angular-Slickgrid), [Aurelia-Slickgrid](https://github.com/ghiscoding/aurelia-slickgrid) and [Slickgrid-Universal](https://github.com/ghiscoding/slickgrid-universal). The list of changes to this fork are shown below.
+This is a modified version (forked from version `1.2.1` of [multiple-select](https://github.com/wenzhixin/multiple-select)) to add functionalities required other libraries [Angular-Slickgrid](https://github.com/ghiscoding/Angular-Slickgrid), [Aurelia-Slickgrid](https://github.com/ghiscoding/aurelia-slickgrid) and [Slickgrid-Universal](https://github.com/ghiscoding/slickgrid-universal) which I'm the author. The list of changes applied to this fork are shown below.
 
 ## Description
 Multiple select is a jQuery plugin to select multiple elements with checkboxes :).
@@ -22,7 +22,7 @@ New Multiple-Select Options:
  - width option was not working when using "container", added some code to support it
  - `offsetLeft` (defaults to 0) if we want the drop to be offset from the select element (by default it is aligned left to the element with 0 offset)
  - `autoAdjustDropHeight` (defaults to False) when set will automatically adjust the drop (up or down) height
- - `autoAdjustDropPosition` (defaults to False) when set will automatically calculate the area with the most available space and use best possible choise for the drop to show (up or down)
+ - "autoAdjustDropPosition" (defaults to False) when set will automatically calculate the area with the most available space and use best possible choice for the drop to show (up/down and left/right)
  - `autoDropWidth` (defaults to False) when set will automatically adjust the dropdown width with the same size as the select element width
  - `autoAdjustDropWidthByTextSize` (defaults to false) when set will automatically adjust the drop (up or down) width by the text size (it will use largest text width)
  - `adjustHeightPadding` (defaults to 10) when using "autoAdjustDropHeight" we might want to add a bottom (or top) padding instead of taking the entire available space
