@@ -779,7 +779,7 @@
       if (this.options.addTitle) {
         var selectType = (this.options.useSelectOptionLabel || this.options.useSelectOptionLabelToHtml) ? 'label' : 'text';
         if ($span) {
-          $span.prop('title', this.getSelects(selectType));
+          $span.prop('title', this.getSelects(selectType).join(this.options.delimiter));
         }
       }
 
