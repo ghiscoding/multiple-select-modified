@@ -338,9 +338,10 @@
 
       if ($elm.is('option')) {
         var value = $elm.val(),
+          customStyle = this.options.styler(value),
+          style = customStyle ? `style="${customStyle}"` : '',
           text = that.options.textTemplate($elm),
           selected = $elm.prop('selected'),
-          style = sprintf('style="%s"', this.options.styler(value)),
           $el;
 
         disabled = groupDisabled || $elm.prop('disabled');
