@@ -1033,14 +1033,18 @@
       } else {
         this.$selectItems.each(function () {
           var $parent = $(this).parent();
-          $parent[removeDiacritics($parent.text().toLowerCase()).indexOf(removeDiacritics(text)) < 0 ? 'hide' : 'show']();
+          var $li = $parent.parent('li');
+          var hideOrShow = removeDiacritics($parent.text().toLowerCase()).indexOf(removeDiacritics(text)) < 0 ? 'hide' : 'show';
+          $li[hideOrShow]();
         });
         this.$disableItems && this.$disableItems.parent().hide();
         this.$selectGroups.each(function () {
           var $parent = $(this).parent();
-          var group = $parent.attr('data-group'),
-            $items = that.$selectItems.filter(':visible');
-          $parent[$items.filter(sprintf('[data-group="%s"]', group)).length ? 'show' : 'hide']();
+		      var $li = $parent.parent('li');
+          var group = $parent.attr('data-group');
+          var $items = that.$selectItems.filter(':visible');
+          var hideOrShow = $items.filter(sprintf('[data-group="%s"]', group)).length ? 'show' : 'hide';
+          $li[hideOrShow]();
         });
 
         //Check if no matches found
