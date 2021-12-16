@@ -1030,6 +1030,9 @@
         this.$disableItems && this.$disableItems.parent().show();
         this.$selectGroups && this.$selectGroups.parent().show();
         this.$noResults.hide();
+        this.$selectItems.each(function () {
+          $(this).closest('li').show();
+        });
       } else {
         this.$selectItems.each(function () {
           var $parent = $(this).parent();
@@ -1040,7 +1043,7 @@
         this.$disableItems && this.$disableItems.parent().hide();
         this.$selectGroups.each(function () {
           var $parent = $(this).parent();
-		      var $li = $parent.parent('li');
+          var $li = $parent.parent('li');
           var group = $parent.attr('data-group');
           var $items = that.$selectItems.filter(':visible');
           var hideOrShow = $items.filter(sprintf('[data-group="%s"]', group)).length ? 'show' : 'hide';
