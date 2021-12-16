@@ -35,8 +35,8 @@ New Multiple-Select Options:
  - `useSelectOptionLabelToHtml` (defaults to False), same as "useSelectOptionLabel" but will also render html
 
 New methods:
- - getOptions: returns multiple-select current options (copied from latest version of the original multiple-select.js lib)
- - refreshOptions: set new multiple-select options and refresh the element (copied from latest version of the original multiple-select.js lib)
+ - `getOptions`: returns multiple-select current options (copied from latest version of the original multiple-select.js lib)
+ - `refreshOptions`: set new multiple-select options and refresh the element (copied from latest version of the original multiple-select.js lib)
 
 ## jsFiddle examples
 
