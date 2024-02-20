@@ -1,5 +1,8 @@
 # Multiple Select
 
+# Project moved to [Multiple-Select-Vanilla](https://github.com/ghiscoding/multiple-select-vanilla)
+This older project fork is now archived and a full rewrite of this project was moved to a newer repo named as [Multiple-Select-Vanilla](https://github.com/ghiscoding/multiple-select-vanilla)
+
 ## Modified Version
 This is a modified version (forked from version `1.2.1` of [multiple-select](https://github.com/wenzhixin/multiple-select)) to add functionalities required other libraries [Angular-Slickgrid](https://github.com/ghiscoding/Angular-Slickgrid), [Aurelia-Slickgrid](https://github.com/ghiscoding/aurelia-slickgrid) and [Slickgrid-Universal](https://github.com/ghiscoding/slickgrid-universal) which I'm the author. The list of changes applied to this fork are shown below.
 
